@@ -1,9 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LogIn from "./Components/LogIn";
+import SignUp from "./Components/SignUp";
 function App() {
-  return (
-      <h1 className="text-xl font-bold underline">
-        Hello world!
-      </h1>
+  return (  
+     <Router>
+      <Routes>
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+
+      </Routes>
+    </Router>
+  
   );
 }
 
